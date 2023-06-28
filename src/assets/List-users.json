@@ -1,3 +1,12 @@
+[
 {
-
+    "nom":"eya",
+    "prenom":"ridene",
+    "nombre_enfants":2
+},
+{
+    "nom":"aziz",
+    "prenom":"mass",
+    "nombre_enfants":5
 }
+]

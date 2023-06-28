@@ -1,27 +1,46 @@
-import {Component, OnInit} from '@angular/core';
-import {User} from './entity/User';
-
+import { Component, OnInit } from '@angular/core';
+import { User } from './entity/User';
+import { ApiUsersService } from './services/api-users.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'test-technique';
-  listUsers:User[]=[];
+  listUsers: User[] = [];
+  sideBarIsOpen: boolean = false;
+  userToEdit: User = null;
 
-  ngOnInit(): void {
+  constructor(private userService: ApiUsersService) {}
 
+  ngOnInit(): void {}
+
+  LoadListUsersFromJson() {
+    this.userService.getUsers().subscribe((users: User[]) => {
+      this.listUsers = users;
+      console.log(users);
+    });
   }
 
-  /*
-  * @ToDo
-  * */
-  LoadListUsersFromJson(){}
+  openSlidBarToAdd() {
+    this.userToEdit = null;
+    this.sideBarIsOpen = true;
+  }
+  closeSideBar(event: User | null) {
+    if (event) {
+      this.listUsers.push(event);
+      console.log(this.listUsers, event);
+      this.LoadListUsersFromJson();
+    }
 
-  /*
-  * @ToDo
-  * */
-  SaveListUsersInJson(){}
+    this.sideBarIsOpen = false;
+  }
 
+  editUser(user: User) {
+    this.userToEdit = user;
+    this.sideBarIsOpen = true;
+  }
+
+  SaveListUsersInJson() {}
 }

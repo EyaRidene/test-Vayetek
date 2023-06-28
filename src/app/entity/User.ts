@@ -1,8 +1,11 @@
+import { v4 as uuidv4 } from 'uuid';
 export class User {
+  private _id;
   private _nom;
   private _prenom;
   private _nombre_enfants;
-  constructor(nom: string, prenom: string, nb: Number) {
+
+  constructor(nom: String, prenom: String, nb: Number) {
     this._nom = nom;
     this._prenom = prenom;
     this._nombre_enfants = nb;
@@ -18,6 +21,14 @@ export class User {
 
   get prenom() {
     return this._prenom;
+  }
+
+  get id() {
+    return this._id;
+  }
+
+  set id(num: Number) {
+    this._id = num;
   }
 
   set prenom(value) {

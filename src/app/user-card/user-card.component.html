@@ -1,1 +1,13 @@
-<p>user-card works!</p>
+<div class="user-card">
+    <button class="btn" (click)="deleteUser($event)"><i class="fa fa-trash"></i></button>
+    <p class="label-name">NOM</p>
+    <label>{{ user.nom }}</label>
+    <p class="label-name">PRENOM</p>
+    <label>{{ user.prenom }}</label>
+    <p class="label-name">NB ENFANTS</p>
+    <div class="enfant-controls">
+      <label>{{ user.nombre_enfants }}</label>
+      <button (click)="decrementEnfant($event)">-</button>
+      <button (click)="incrementEnfant($event)">+</button>
+    </div> 
+</div>
