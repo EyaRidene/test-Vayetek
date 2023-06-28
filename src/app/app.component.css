@@ -1,9 +1,9 @@
 
 .corp {
     margin-top: 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 60%;
+    margin-left: 320px;
+    
 }
   
 .corp .cards-container {
@@ -30,7 +30,7 @@
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.905);
 }
   
-.sidebar {
+.slid-bar {
     position: fixed;
     top: 0;
     width: 300px;
@@ -80,10 +80,10 @@
 }
  
 
-.addImage{
+.addIcon{
     width: 260px;
     height: 300px;
-    border: 4px dashed black;
+    border: 4px dashed #2d2e37;
     font-size: 200px;
     text-align: center;
     margin-left: 30px;
@@ -91,12 +91,8 @@
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+    text-decoration-color: #2d2e37;
 }
-.addImage:hover {
+.addIcon:hover {
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.905);
 }
-
-
-#add:active .corp {
-    background-color: red;
-} 

@@ -1,4 +1,4 @@
-<app-config-side-bar *ngIf="sideBarIsOpen" [user]="userToEdit" (onClose)="closeSideBar($event)" class="sidebar"></app-config-side-bar>  
+<app-config-side-bar *ngIf="sideBarIsOpen" [user]="userToEdit" (onClose)="closeSideBar($event)" class="slid-bar"></app-config-side-bar>  
 <div class="corp">
     <div class="buttons">
         <button (click)="openSlidBarToAdd()" class="actionButton" id="add"><i class="fa fa-plus icon"></i>Add</button>
@@ -8,7 +8,7 @@
         <div *ngFor="let user of listUsers" class="user-card" >
             <app-user-card  [user]="user" (click)="editUser(user)"></app-user-card>
         </div>
-        <div class="addImage" (click)="openSlidBarToAdd()">+</div>
+        <div class="addIcon" (click)="openSlidBarToAdd()">+</div>
     </div>
 </div>  
 
