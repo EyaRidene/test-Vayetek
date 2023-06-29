@@ -1,14 +1,13 @@
-<app-config-side-bar *ngIf="sideBarIsOpen" [user]="userToEdit" (onClose)="closeSideBar($event)" class="slid-bar"></app-config-side-bar>  
-<div class="corp">
-    <div class="buttons">
-        <button (click)="openSlidBarToAdd()" class="actionButton" id="add"><i class="fa fa-plus icon"></i>Add</button>
-        <button (click)="LoadListUsersFromJson()" class="actionButton" id="load"><i class="fa fa-spinner icon"></i>Load</button>   
+<app-config-side-bar *ngIf="sideBarIsOpen" [user]="userToEdit" (onClose)="closeSideBar($event)" class="SideBar"></app-config-side-bar>  
+<div class="corp" [ngClass]="{'sidebar-open': sideBarIsOpen}">
+  <div class="buttons">
+    <button (click)="openSlidBarToAdd()" class="actionButton" id="add"><i class="fa fa-plus icon"></i>Add</button>
+    <button (click)="LoadListUsersFromJson()" class="actionButton" id="load"><i class="fa fa-spinner icon"></i>Load</button>   
+  </div>
+  <div class="cards-container">
+    <div *ngFor="let user of listUsers" class="user-card">
+      <app-user-card [user]="user" (click)="editUser(user)" (userDeleted)="deleteUser($event)"></app-user-card>
     </div>
-    <div class="cards-container">
-        <div *ngFor="let user of listUsers" class="user-card" >
-            <app-user-card  [user]="user" (click)="editUser(user)" (userDeleted)="deleteUser($event)"></app-user-card>
-        </div>
-        <div class="addIcon" (click)="openSlidBarToAdd()">+</div>
-    </div>
+    <div class="addIcon" (click)="openSlidBarToAdd()">+</div>
+  </div>
 </div>  
-

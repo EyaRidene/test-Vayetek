@@ -1,6 +1,7 @@
 .user-card{
     position: relative;
 }
+
 .btn {
     position: absolute;
     top: 0;
@@ -21,6 +22,7 @@
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 label{
@@ -35,8 +37,6 @@ label{
 
 
 }
-
-
 
 button{
     background-color: #4c4faf;

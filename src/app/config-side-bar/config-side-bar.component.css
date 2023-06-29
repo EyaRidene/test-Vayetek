@@ -1,6 +1,7 @@
 .configSlidBar{
   border-radius: 50px;
 }
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -9,10 +10,10 @@
     margin-left: 20px;
     margin-right: 20px;
 
-  }
+}
 
-  .form-container input[type="text"],
-  .form-container input[type="number"] {
+.form-container input[type="text"],
+.form-container input[type="number"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -21,13 +22,14 @@
     margin-bottom: 5px;
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.905);
-  }
-  .form-container input[type="number"] {
+}
+
+.form-container input[type="number"] {
     background-color: #c8c8c8;
     color: black;
-  }
+}
 
-  .form-container button {
+.form-container button {
     padding: 10px;
     background-color: #5254ba;
     color: white;
@@ -37,17 +39,17 @@
     cursor: pointer;
     margin-top: 10px;
 
-  }
+}
 
-  .form-container button:hover {
+.form-container button:hover {
     background-color:#999 ;
-  }
+}
 
-  .form-container .cancelButton{
+.form-container .cancelButton{
     margin-top: 50px;
-  }
+}
 
-  header{
+header{
     font-size: 25px;
     color: black;
     text-align: center;
@@ -56,9 +58,9 @@
     user-select: none;
     font-weight: bold;
     box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.905);
-  }
+}
 
-  header i{
+header i{
     margin-right: 5px;
     color: #32347d;
 }
