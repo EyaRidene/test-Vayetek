@@ -2,11 +2,11 @@
 <div class="corp">
     <div class="buttons">
         <button (click)="openSlidBarToAdd()" class="actionButton" id="add"><i class="fa fa-plus icon"></i>Add</button>
-        <button (click)="LoadListUsersFromJson()" class="actionButton" id="load"><i class="fa fa-spinner icon"></i>Refresh</button>   
+        <button (click)="LoadListUsersFromJson()" class="actionButton" id="load"><i class="fa fa-spinner icon"></i>Load</button>   
     </div>
     <div class="cards-container">
         <div *ngFor="let user of listUsers" class="user-card" >
-            <app-user-card  [user]="user" (click)="editUser(user)"></app-user-card>
+            <app-user-card  [user]="user" (click)="editUser(user)" (userDeleted)="deleteUser($event)"></app-user-card>
         </div>
         <div class="addIcon" (click)="openSlidBarToAdd()">+</div>
     </div>

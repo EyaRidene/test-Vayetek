@@ -42,5 +42,9 @@ export class AppComponent implements OnInit {
     this.sideBarIsOpen = true;
   }
 
+  deleteUser(id: number) {
+    this.listUsers = this.listUsers.filter((user) => user.id !== id);
+  }
+
   SaveListUsersInJson() {}
 }

@@ -11,8 +11,7 @@ export class UserCardComponent implements OnInit {
   constructor(private userService: ApiUsersService) {}
 
   @Input() user: User = null;
-  @Output() userDeleted = new EventEmitter<Number>();
-  @Output() userUpdated = new EventEmitter<User>();
+  @Output() userDeleted = new EventEmitter<Number>(); // Emitting the user's ID as a number
 
   ngOnInit(): void {}
 
@@ -33,7 +32,6 @@ export class UserCardComponent implements OnInit {
     event.stopPropagation();
     this.userService.editUser(this.user).subscribe((updatedUser: User) => {
       this.user = updatedUser;
-      this.userUpdated.emit(this.user);
     });
   }
 
@@ -41,7 +39,6 @@ export class UserCardComponent implements OnInit {
     event.stopPropagation();
     if (confirm('Are you sure you want to delete this user?')) {
       this.userService.deleteUser(this.user.id).subscribe(() => {
-        this.user = null;
         this.userDeleted.emit(this.user.id);
       });
     }

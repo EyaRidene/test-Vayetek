@@ -1,10 +1,10 @@
-<div class="config">
+<div class="configSlidBar">
   <header><i class="fas fa-cogs"></i>Configurations</header>
   <div class="form-container">
     <input type="text" [(ngModel)]="nom" placeholder="Nom">
     <input type="text" [(ngModel)]="prenom" placeholder="Prénom">
-    <input type="number" [(ngModel)]="nbEnfant" placeholder="Nombre d'enfants">
-    <button (click)="cancel()">Cancel</button>
+    <input type="number" [(ngModel)]="nbEnfant" placeholder="Nombre d'enfants" disabled>
+    <button class="cancelButton" (click)="cancel()">Cancel</button>
     <button (click)="submission()">Submit</button>
   </div>
 </div>

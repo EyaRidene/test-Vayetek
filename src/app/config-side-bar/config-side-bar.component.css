@@ -1,34 +1,50 @@
+.configSlidBar{
+  border-radius: 50px;
+}
 .form-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 20px 20px 20px 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
   }
 
   .form-container input[type="text"],
   .form-container input[type="number"] {
-    padding: 18px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 20px;
     margin-top: 10px ;
     margin-bottom: 5px;
     font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.905);
+  }
+  .form-container input[type="number"] {
+    background-color: #c8c8c8;
+    color: black;
   }
 
   .form-container button {
-    padding: 10px 20px;
-    background-color: #4c4faf;
+    padding: 10px;
+    background-color: #5254ba;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
+
   }
 
   .form-container button:hover {
     background-color:#999 ;
+  }
+
+  .form-container .cancelButton{
+    margin-top: 50px;
   }
 
   header{
@@ -36,12 +52,13 @@
     color: black;
     text-align: center;
     line-height: 70px;
-    background-color:#999;
+    background-color:#ccc8c8;
     user-select: none;
     font-weight: bold;
-
+    box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.905);
   }
 
   header i{
-    margin-right: 16px;
+    margin-right: 5px;
+    color: #32347d;
 }
